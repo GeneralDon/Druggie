@@ -43,9 +43,9 @@ public class Druggie extends JavaPlugin {
 				ChatColor YELLOW=ChatColor.YELLOW;
 				ChatColor BLUE=ChatColor.BLUE;
 				ChatColor GREEN=ChatColor.GREEN;
-				sender.sendMessage(YELLOW+"HungerBarGames version "+BLUE+getDescription().getVersion()+YELLOW+".");
-				sender.sendMessage(YELLOW+"Made by "+GREEN+"tomjw64"+YELLOW+" and "+GREEN+"HaydenCappadona"+YELLOW+"!");
-				sender.sendMessage(YELLOW+"Type "+BLUE+"/hbg help"+YELLOW+" for HungerBarGames commands!");
+				sender.sendMessage(YELLOW+"Druggie version "+BLUE+getDescription().getVersion()+YELLOW+".");
+				sender.sendMessage(YELLOW+"Made by "+GREEN+"GeneralDon"+YELLOW+"!");
+				sender.sendMessage(YELLOW+"Type "+BLUE+"/drugg help"+YELLOW+" for Druggie commands!");
 			}
 		}
 		return true;
