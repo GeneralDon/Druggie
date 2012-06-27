@@ -1,11 +1,14 @@
 package com.github.generaldon;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.PluginDescriptionFile;
 
 import com.github.generaldon.General.ConfigManager;
 
@@ -15,19 +18,28 @@ public class Druggie extends JavaPlugin {
 	
     public static final Logger logger=Logger.getLogger("Minecraft");
     
+    public Map<String, Integer> Addict = new HashMap();
+    
     @Override
     public void onEnable(){
     	
     	plugin=this;
     	
+    	PluginDescriptionFile pdf = getDescription();
     	ConfigManager.loadConfig(this);
-            logger.info("Druggie version 0.0.1 enabled sucessfully!");
+            logger.info("Druggie version "+pdf.getVersion()+" enabled sucessfully!");
             CommandHandler.loadCommands(this);
+            
+        try {
+        	this.Addict = ((HashMap)SLAPI.load("Druggie.DAT"));
+        } catch (Exception lacalException) {
+        }
     }
    
     @Override
     public void onDisable(){
-            logger.info("Druggie version 0.0.1 disabled sucessfully!");
+    		PluginDescriptionFile pdf = getDescription();
+            logger.info("Druggie version "+pdf.getVersion()+" disabled sucessfully!");
     }
     
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args)
