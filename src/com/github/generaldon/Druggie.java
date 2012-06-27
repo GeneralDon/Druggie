@@ -18,10 +18,14 @@ public class Druggie extends JavaPlugin {
 	
     public static final Logger logger=Logger.getLogger("Minecraft");
     
-    public Map<String, Integer> Addict = new HashMap();
+    public Map<String, Integer> Addict = new HashMap<String, Integer>();
     
-    @Override
+	@Override
     public void onEnable(){
+    	try {
+    	      this.Addict = ((HashMap)SLAPI.load("Stimulatory.DAT"));
+    	    } catch (Exception localException) {
+    	    }
     	
     	plugin=this;
     	
@@ -29,11 +33,6 @@ public class Druggie extends JavaPlugin {
     	ConfigManager.loadConfig(this);
             logger.info("Druggie version "+pdf.getVersion()+" enabled sucessfully!");
             CommandHandler.loadCommands(this);
-            
-        try {
-        	this.Addict = ((HashMap)SLAPI.load("Druggie.DAT"));
-        } catch (Exception lacalException) {
-        }
     }
    
     @Override
