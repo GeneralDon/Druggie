@@ -1,0 +1,11 @@
+name: Druggie
+main: com.github.generaldon.Druggie
+version: 0.0.1
+author: GeneralDon
+description: Make some drugs!.
+commands:
+    drugg:
+        description: Main Druggie command.
+        usage: /drugg
+        permission: Druggie.*
+        permission-message: You don't have permission!
