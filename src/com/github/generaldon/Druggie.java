@@ -18,7 +18,7 @@ public class Druggie extends JavaPlugin {
 	
     public static final Logger logger=Logger.getLogger("Minecraft");
     
-    public Map<String, Integer> Addict = new HashMap<String, Integer>();
+    public static Map<String, Integer> Addict = new HashMap<String, Integer>();
     
 	@Override
     public void onEnable(){
