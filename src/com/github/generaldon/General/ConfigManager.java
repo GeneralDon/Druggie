@@ -22,6 +22,8 @@ public class ConfigManager {
 	private static String prefix;
 	//Whether plugin should use player group permissions
 	private static boolean playerPerms;
+	//First drug
+	private static int drug1;
 
 	//Call onEnable for initialization
 	public static void loadConfig(Druggie pl)
@@ -64,11 +66,17 @@ public class ConfigManager {
 			config.createSection("PlayerPerms");
 			config.set("PlayerPerms", false);
 		}
+		if(!config.contains("drug1"))
+		{
+			config.createSection("drug1");
+			config.set("drug1", "373:2");
+		}
 		saveConfig();
 
 		//Load configuration options to memory
 		prefix=ChatColor.BLUE+"["+ChatColor.YELLOW+config.getString("Prefix")+ChatColor.BLUE+"] "+ChatColor.WHITE;
 		playerPerms=config.getBoolean("PlayerPerms");
+		drug1=config.getInt("drug1");
 	}
 	//Get the config
 	public static FileConfiguration getConfig()
@@ -92,5 +100,9 @@ public class ConfigManager {
 	public static boolean usingPlayerPerms()
 	{
 		return playerPerms;
+	}
+	public static int getDrug1()
+	{
+		return drug1;
 	}
 }
