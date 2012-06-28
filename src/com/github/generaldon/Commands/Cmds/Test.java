@@ -3,13 +3,14 @@ package com.github.generaldon.Commands.Cmds;
 import org.bukkit.command.CommandSender;
 
 import com.github.generaldon.Commands.Main;
+import com.github.generaldon.General.ConfigManager;
 
 public class Test extends Main{
 	
 	@Override
 	public void execute(CommandSender sender, String[] args)
 	{
-		sender.sendMessage(GREEN+"End of help");
+		sender.sendMessage(GREEN + "hello " + ConfigManager.drug1);
 	}
 	
 	@Override
