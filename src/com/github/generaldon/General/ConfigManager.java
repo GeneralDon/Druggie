@@ -23,7 +23,7 @@ public class ConfigManager {
 	//Whether plugin should use player group permissions
 	private static boolean playerPerms;
 	//First drug
-	private static int drug1;
+	public static int drug1;
 
 	//Call onEnable for initialization
 	public static void loadConfig(Druggie pl)
@@ -71,6 +71,11 @@ public class ConfigManager {
 			config.createSection("drug1");
 			config.set("drug1", "373:2");
 		}
+		if(!config.contains("murky"))
+		{
+			config.createSection("murky");
+			config.set("murky", "meep");
+		}
 		saveConfig();
 
 		//Load configuration options to memory
@@ -104,5 +109,9 @@ public class ConfigManager {
 	public static int getDrug1()
 	{
 		return drug1;
+	}
+	public static String getMurky()
+	{
+		return getMurky();
 	}
 }
