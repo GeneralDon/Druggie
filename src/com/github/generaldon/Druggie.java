@@ -20,6 +20,8 @@ public class Druggie extends JavaPlugin {
     
     public static Map<String, Integer> Addict = new HashMap<String, Integer>();
     
+    public static int l = 0;
+    
 	@Override
     public void onEnable(){
     	try {
