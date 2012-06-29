@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
@@ -20,6 +21,18 @@ import com.github.generaldon.General.ConfigManager;
 public class Full {
 	
 	int l = 0;
+	
+	String[][] LANGUAGE_DATA = new String[4][30];
+	  String ROVIE_NAME = "rovie";
+	  int ROVIE_POWER = 10;
+	  int LANGUAGE = 0;
+	  String MURK_NAME = "murk";
+	  String SHROOMS_NAME = "shrooms";
+	  String BATHOL_NAME = "bathol";
+	  String ANTITRIP_NAME = "anti-trip";
+	  String ANTIADDICTION_NAME = "anti-addiction";
+	  int ANTIADDICTION_POWER = 5;
+	  FileConfiguration config;
 	
 	  public String getDAT(int col, int MULTIPLIER)
 	  {
