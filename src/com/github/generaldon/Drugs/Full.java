@@ -70,7 +70,7 @@ public class Full {
 		    this.LANGUAGE_DATA[0][23] = "You are now moderately addicted to %rovie%.";
 		    this.LANGUAGE_DATA[0][24] = "You are now slightly addicted to %rovie%.";
 		    this.LANGUAGE_DATA[0][25] = "You are feeling a bit too wasted to ingest any %shrooms%.";
-		    this.LANGUAGE_DATA[0][26] = "You are feeling a bit too wasted to gulp down any %bathol%.";
+		    this.LANGUAGE_DATA[0][26] = "You are feeling a bit too drunk to gulp down any %bathol%.";
 		    this.LANGUAGE_DATA[0][27] = "You cannot take drugs while in Creative Mode.";
 		    this.LANGUAGE_DATA[0][28] = "You are suffering withdrawals from a lack of %rovie%.";
 		    this.LANGUAGE_DATA[0][29] = "You can't drug people if they're already high.";
