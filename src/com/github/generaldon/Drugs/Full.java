@@ -40,8 +40,7 @@ public class Full {
 	    String RESULT = this.LANGUAGE_DATA[this.LANGUAGE][col];
 	    RESULT = RESULT.replaceAll("%murk%", ChatColor.DARK_GREEN + ConfigManager.Murk() + ChatColor.WHITE);
 	    if (MULTIPLIER > 0)
-	    	String.valueOf(MULTIPLIER);
-	      RESULT = RESULT.replaceAll("%mult%", MULTIPLIER);
+	      RESULT = RESULT.replace("%mult%", String.valueOf(MULTIPLIER));
 	    return RESULT;
 	  }
 	  public void FILL_ARRAYS() {
@@ -108,7 +107,7 @@ public class Full {
 	            p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, (int)(750.0D * Math.floor(Math.sqrt(MULTIPLIER))), 2 * MULTIPLIER));
 	            p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 2 * MULTIPLIER));
 	            p.sendMessage(getDAT(5, MULTIPLIER));
-	            Druggie.logger.info(p.getName() + " has smoked " + MULTIPLIER + " spliff(s) of " + ConfigManager.getMurky() + ".");
+	            Druggie.logger.info(p.getName() + " has smoked " + MULTIPLIER + " spliff(s) of " + ConfigManager.Murk() + ".");
 	            p.setItemInHand(null);
 	          }
 }
