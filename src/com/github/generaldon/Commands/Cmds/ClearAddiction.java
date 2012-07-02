@@ -13,7 +13,7 @@ public class ClearAddiction extends Main{
 	@Override
 	public void execute(CommandSender sender, String[] args)
 	{
-		private static dat = Full.getDAT;
+		private static dat = Full.getDAT; //Buggy right here, don't know how to do this piece.
 		Druggie.Addict.put(sender.getName(), Integer.valueOf(0));
 	      Player p = (Player)sender;
 	      p.sendMessage(Full.getDAT(0, 0));
