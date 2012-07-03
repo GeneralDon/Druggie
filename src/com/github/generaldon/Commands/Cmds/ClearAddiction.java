@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import com.github.generaldon.Druggie;
 import com.github.generaldon.Commands.Main;
 import com.github.generaldon.Drugs.Full;
+import com.github.generaldon.General.ChatVariables;
 import com.github.generaldon.General.ConfigManager;
 
 public class ClearAddiction extends Main{
@@ -13,10 +14,9 @@ public class ClearAddiction extends Main{
 	@Override
 	public void execute(CommandSender sender, String[] args)
 	{
-		private static dat = Full.getDAT;
 		Druggie.Addict.put(sender.getName(), Integer.valueOf(0));
 	      Player p = (Player)sender;
-	      p.sendMessage(Full.getDAT(0, 0));
+	      p.sendMessage(ChatVariables.LANGUAGE_DATA[0]);
 	}
 	
 	@Override
