@@ -36,14 +36,14 @@ public class Full {
 	        if (Druggie.l == 5) {
 	          Druggie.l = 0;
 	          try {
-	            Druggie.logger.info("Saving Stimulatory data...");
-	            SLAPI.save(Druggie.Addict, "Stimulatory.DAT");
+	            Druggie.logger.info("Saving Druggie data...");
+	            SLAPI.save(Druggie.Addict, "Druggie.DAT");
 	            Druggie.logger.info("Save succesful!");
 	          } catch (Exception e) {
 	            e.printStackTrace();
 	          }
 	        }
-	        if ((event.getMaterial() == Material.INK_SACK) && (p.getItemInHand().getData().getData() == 2) && (p.hasPermission("Stimulatory.murk")))
+	        if ((event.getMaterial() == Material.INK_SACK) && (p.getItemInHand().getData().getData() == 2) && (p.hasPermission("Druggie.murk")))
 	          if (p.hasPotionEffect(PotionEffectType.CONFUSION)) {
 	            p.sendMessage(ChatVariables.LANGUAGE_DATA[13]); // Here it has no errors
 	          } else {
@@ -53,7 +53,7 @@ public class Full {
 	            p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, (int)(750.0D * Math.floor(Math.sqrt(MULTIPLIER))), 1 * (MULTIPLIER / 5)));
 	            p.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, (int)(750.0D * Math.floor(Math.sqrt(MULTIPLIER))), 2 * MULTIPLIER));
 	            p.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 40, 2 * MULTIPLIER));
-	            p.sendMessage((ChatVariables.LANGUAGE_DATA[5]), MULTIPLIER);
+	            p.sendMessage(ChatVariables.LANGUAGE_DATA[5]+MULTIPLIER);
 	         // Right here there is an error on sendMessage, saying "The method sendMessage(String) in the type CommandSender is not applicable for the arguments (String, int)"
 	         // With one fix, to remove , MULTIPLIER so that it matches sendMessage(String)
 	            Druggie.logger.info(p.getName() + " has smoked " + MULTIPLIER + " spliff(s) of " + ConfigManager.Murk() + ".");
